@@ -24,7 +24,7 @@ top_tracks_url = f"http://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&us
 #filename = "lastfm_recent_tracks.json"
 
 # Select the total number of pages
-#total_pages = data["recenttracks"]["@attr"]["totalPages"]
+#total_pages = data["recenttracks"]["@attr"]["totalPages"] 
 
 # function to make a call to the api enpoint provided
 def api_call(url, page):
@@ -107,6 +107,6 @@ def get_album_chart(url, number, period):
 		print(f"{params[0]:<30}{params[1]:<50}{params[2]}")
 
 
-get_artist_chart(top_artists_url, 10, "12month")
-get_album_chart(top_ablums_url, 10, "12month")
+get_artist_chart(top_artists_url, 25, "12month")
+get_album_chart(top_ablums_url, 25, "12month")
 get_tracks_chart(top_tracks_url, 100, "12month")
